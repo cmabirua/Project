@@ -1,0 +1,50 @@
+.card{
+    width: 300px;
+    height: 300px;
+    border: 1px grey solid;
+    margin-left: 20%;
+    margin-top: 20px;
+    transition: 0.5s;
+    border-radius:5px ;
+    overflow: hidden;
+}
+.card:hover {
+    box-shadow:1px 1px 10px 1px grey;
+    
+}
+.topic{
+    color: black;
+    margin-top: 30%;
+    font-size: 50px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.button{
+    border: none;
+    background: white;
+    color: #44c112;
+    font-size: 20px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    float: right;
+    margin-top: 70px;
+    margin-right: 20px;
+    transition: 0.5s;
+    
+}
+.button:hover{
+    background: #a5f9a5;
+    color: #44c112;
+}
+@media only screen and (max-width: 600px) {
+    .card{
+    border: 1px grey solid;
+    margin-left: 75px;
+    margin-top: 20px;
+    }
+    .button{
+        background: #a5f9a5;
+        color: #44c112;
+    }
+}
