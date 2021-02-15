@@ -1,53 +1,77 @@
-body{
-    backdrop-filter: blur(10px);
+.back {
+    height: 100vh;
+    background-color: black;
+    /* backgrcolor: black; */
 }
+
+.circle1 {
+    height: 250px;
+    width: 250px;
+    color: pink;
+    background-color: pink;
+    border-radius: 50%;
+    margin-left: 300px;
+}
+
+.circle2 {
+    margin-top: 100px;
+    margin-right: 300px;
+    height: 300px;
+    width: 300px;
+    color: pink;
+    background-color: pink;
+    border-radius: 50%;
+    float: right;
+}
+
 .box {
     position: relative;
     top: 100px;
-    width: 30%;
-    height: 500px;
+    width: 100%;
+    height: 450px;
     padding: 20px;
     border-radius: 5px;
-    transition: 0.5s;
     border: 1px solid gray;
+    margin-top: -100vh;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(243, 218, 218, 0.1);
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
 }
 
-.box:hover {
-    box-shadow: 1px 1px 10px 1px grey;
-    
-}
-
-.btnsignup {
+.btnlogin {
     color: #e25748;
-    transition: 0.5s;
+    /* transition: 0.5s; */
     border: none;
     background-color: white;
-    /* border: 2px red solid; */
-}
-
-.btnsignup:hover {
-    color: #e25748;
-    background-color: #facdc8;
-    
-}
-
-.btnsignup {
-    /* margin-left: 81%;
-    margin-right: 30px; */
     margin-top: 10px;
     margin-left: 30px;
-    padding: 15px 15px;
+    padding: 10px 10px;
     border-radius: 5px;
+    float: right;
+    outline: none;
+    width: 100px;
 }
 
-.txtsign {
+.txtlogin {
     margin-top: 0;
     color: gray;
-    margin-left: 30%;
+    /* margin-left: 25%; */
+}
+
+.txtlogin:hover {
+    text-decoration: none;
+    /* color: gray; */
 }
 
 .name {
-    margin-left: -260px;
+    float: left;
+    color: white;
 }
 
 @media only screen and (max-width: 500px) {
@@ -56,22 +80,33 @@ body{
         width: 90%;
         top: 125px;
         margin-left: 20px;
-
+        margin-top: -90vh;
     }
 
-    .btnsignup {
-        background-color: #facdc8;
+    .btnlogin {
+        background-color: white;
         margin-top: 10px;
-        margin-left: 8px;
+        margin-left: 0px;
+        width: 100%;
     }
 
-    .name {
-        margin-left: -200px;
-    }
-    .txtsign {
-        margin-top: -10px;
+    .txtlogin {
+        margin-top: 0;
         color: gray;
         margin-left: 3%;
     }
 
+    .circle1 {
+        margin-top: 50px;
+        width: 200px;
+        height: 200px;
+        margin-left: 0;
+    }
+
+    .circle2 {
+        margin-top: 300px;
+        width: 200px;
+        height: 200px;
+        margin-right: 0;
+    }
 }
