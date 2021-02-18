@@ -1,4 +1,15 @@
-.card{
+.topic {}
+
+.card {
         padding-right: 0px;
         padding-left: 0px;
+}
+
+.head {
+        font-size: 60px;
+        margin-top: 30px;
+}
+
+.topicbody {
+        height: 100vh;
 }

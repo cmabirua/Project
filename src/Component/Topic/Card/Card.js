@@ -1,13 +1,22 @@
-import React, { useEffect } from "react"
-import Styles from "./Card.module.css"
-import {Link} from "react-router-dom"
- export default function Card(props){
-     
-     
-     return(
-         <div className={Styles.card}>
-            <h1 className={Styles.topic}>{props.Topic}</h1>
-            <Link to={props.Topic}><button className={`${Styles.button}`} >Continue</button> </Link>
-         </div>
-     )
- }
+import React, { useEffect } from "react";
+import Styles from "./Card.module.css";
+import { Link } from "react-router-dom";
+export default function Card(props) {
+  return (
+    <div className={`col-lg-3 col-md-4 ${Styles.content}`}>
+      <div className={`${Styles.card}`}>
+        <div className={`${Styles.wave} ${Styles.one}`}></div>
+        <div className={`${Styles.wave} ${Styles.two}`}></div>
+        <div className={`${Styles.wave} ${Styles.three}`}></div>
+        <div className={Styles.title}>
+          <Link
+            to={"/" + props.Topic}
+            style={{ color: "white", textDecoration: "none" }}
+          >
+            {props.Topic}
+          </Link>{" "}
+        </div>
+      </div>
+    </div>
+  );
+}
