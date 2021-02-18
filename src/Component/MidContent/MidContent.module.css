@@ -1,0 +1,49 @@
+.middle {
+    height: 100vh;
+    background-image: url("./bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.Card {
+    margin-top: 45%;
+    height: 400px;
+    width: 300px;
+    margin-left: 80px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 10px 1px grey;
+    background: rgba(243, 218, 218, 0.1);
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(119, 49, 49, 0.5);
+    backdrop-filter: blur(5px);
+    /* background-color: white; */
+}
+
+.icon {
+    font-size: 50px;
+    margin-top: 15px;
+    color: black;
+}
+
+.head {
+    margin-top: 28px;
+}
+
+.content {
+    margin-top: 20px;
+    /* text-align: justify; */
+    padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .middle {
+        height: auto;
+    }
+
+    .Card {
+        width: 300px;
+        margin: 54px;
+    }
+}
