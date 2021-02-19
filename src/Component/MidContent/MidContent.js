@@ -3,6 +3,18 @@ import Styles from "./MidContent.module.css";
 
 export default function MidContent() {
   return (
+    <>
+    <div className={`row ${Styles.count}`}>
+      <div className="col-lg-4">
+        <h1 className={Styles.num}>1</h1>
+      </div>
+      <div className="col-lg-4">
+        <h1 className={Styles.num}>2</h1>
+      </div>
+      <div className="col-lg-4">
+        <h1 className={Styles.num}>3</h1>
+      </div>
+    </div>
     <div className={`row ${Styles.middle}`}>
       <div className={`col-lg-4 justify-content-center`}>
         <div className={`${Styles.Card}`}>
@@ -40,5 +52,6 @@ export default function MidContent() {
         </div>
       </div>
     </div>
+    </>
   );
 }

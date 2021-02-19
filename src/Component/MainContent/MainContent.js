@@ -30,7 +30,7 @@ export default function () {
             </Link>
             <Link to="/Signup">
               {" "}
-              <a>SignUp</a>
+              <a href="/Signup">SignUp</a>
             </Link>
             <Link to="/Contact">
               {" "}

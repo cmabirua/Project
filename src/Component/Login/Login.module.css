@@ -1,10 +1,14 @@
 .back {
     height: 100vh;
-    background-color: black;
+    background-image: url(./bg.jpg);
+    background-size: cover;
+    background-position: center;
+    
+
     /* backgrcolor: black; */
 }
 
-.circle1 {
+/* .circle1 {
     height: 300px;
     width: 300px;
     color: pink;
@@ -22,7 +26,7 @@
     background-color: pink;
     border-radius: 50%;
     float: right;
-}
+} */
 
 .box {
     position: relative;
@@ -96,7 +100,7 @@
         margin-left: 3%;
     }
 
-    .circle1 {
+    /* .circle1 {
         margin-top: 50px;
         width: 200px;
         height: 200px;
@@ -108,5 +112,5 @@
         width: 200px;
         height: 200px;
         margin-right: 0;
-    }
+    } */
 }

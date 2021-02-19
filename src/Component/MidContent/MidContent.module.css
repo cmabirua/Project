@@ -1,8 +1,20 @@
-.middle {
+.count{
     height: 100vh;
-    background-image: url("./bg.jpg");
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.middle {
+    
+height: 100vh;
+margin-top: -100vh;
+/* background-image: url("./bg.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center; */
+}
+.num{
+    margin-top: 70%;
+    font-size: 100px;
 }
 
 .Card {
@@ -17,7 +29,7 @@
     overflow: hidden;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(119, 49, 49, 0.5);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
     /* background-color: white; */
 }
 
@@ -40,6 +52,13 @@
 @media only screen and (max-width: 600px) {
     .middle {
         height: auto;
+    }
+    .count{
+        height: auto;
+        /* visibility: hidden; */
+    }
+    .num{
+        visibility: hidden;
     }
 
     .Card {
