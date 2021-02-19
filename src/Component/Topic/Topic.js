@@ -22,7 +22,7 @@ export default function Topic() {
       <div className={Styles.topicbody}>
         <h1 className={Styles.head}>Data Structures</h1>
         <div className="row" style={{ marginTop: "40px" }}>
-          {arr.map((topic) => (
+          {arr.map(topic => (
             <Card Topic={topic} />
           ))}
         </div>

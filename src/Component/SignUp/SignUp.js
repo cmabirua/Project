@@ -2,9 +2,6 @@ import React,{useState} from "react"
 import {NavLink} from "react-router-dom";
 import Styles from "./Signup.module.css"
 import TextBox from "../../UI/TextBox/TextBox"
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
 // var [error,SetError] = useState("")
 
 
@@ -13,12 +10,7 @@ export default function SignUp(){
     const [e,setEmail] = useState(null); // for email validata or not check
     const [p,setPhone] = useState(null); // for number validate or not check
 
-    const useStyles = makeStyles((theme) => ({
-    form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(3),
-    },
-    }));
+    
 
 var check = ()=>{
     var email = document.getElementById("email").value;
@@ -47,7 +39,6 @@ var checkphone = (data)=>{
     }
 }
 
-const classes = useStyles();
     return (
     <div className="container-fluid">
       <div className="row">

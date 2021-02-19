@@ -127,7 +127,7 @@ header .navigation a:hover {
     margin: auto;
 }
 
-.media_icons a {
+.media_icons .icons{
     position: relative;
     color: #111;
     font-size: 25px;
@@ -135,11 +135,11 @@ header .navigation a:hover {
     transition-property: transform;
 }
 
-.media_icons a:not(:last-child) {
+.media_icons .icons:not(:last-child) {
     margin-right: 60px;
 }
 
-.media_icons a:hover {
+.media_icons .icons:hover {
     transform: scale(1.5);
 }
 

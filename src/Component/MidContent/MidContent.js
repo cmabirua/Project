@@ -18,9 +18,9 @@ export default function MidContent() {
     <div className={`row ${Styles.middle}`}>
       <div className={`col-lg-4 justify-content-center`}>
         <div className={`${Styles.Card}`}>
-          <a className={`${Styles.icon}`}>
+          <i className={`${Styles.icon}`}>
             <i className={`fas fa-database`}></i>
-          </a>
+          </i>
           <h3 className={Styles.head}>Data Structures Courses</h3>
           <p className={Styles.content}>
             It is very important for Coding Interview and help to improve your
@@ -30,9 +30,9 @@ export default function MidContent() {
       </div>
       <div className={`col-lg-4 justify-content-center`}>
         <div className={`${Styles.Card}`}>
-          <a className={`${Styles.icon}`}>
+          <i  className={`${Styles.icon}`}>
             <i className={`fas fa-clock`}></i>
-          </a>
+          </i>
           <h3 className={Styles.head}>Time and Space Complexity</h3>
           <p className={Styles.content}>
             We discuss the time and space complexity of every question.
@@ -41,9 +41,9 @@ export default function MidContent() {
       </div>
       <div className={`col-lg-4 justify-content-center`}>
         <div className={`${Styles.Card}`}>
-          <a className={`${Styles.icon}`}>
+          <i href="/" className={`${Styles.icon}`}>
             <i className={`fas fa-language`}></i>
-          </a>
+          </i>
           <h3 className={Styles.head}>Solution in many Language</h3>
           <p className={Styles.content}>
             We use many types of language of every solution. Because every body

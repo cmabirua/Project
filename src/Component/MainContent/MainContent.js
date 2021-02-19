@@ -1,10 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import Navigation from "../Navigation/Navigation"
-import Topic from "../Topic/Topic";
 import Styles from "./MainContent.module.css";
-import MidContent from "../MidContent/MidContent";
-import Parallax from "react-rellax"
 export default function () {
   return (
     <div>
@@ -13,20 +9,20 @@ export default function () {
         <input type="checkbox" id={Styles.check} />
         <header>
           <h2>
-            <a href="" className={Styles.logo}>Logo</a>
+            <p href="" className={Styles.logo}>Logo</p>
           </h2>
           <div className={Styles.navigation}>
             <Link to="/">
               {" "}
-              <a>Home</a>
+              <a href="/">Home</a>
             </Link>
             <Link to="/About">
               {" "}
-              <a>About</a>
+              <a href="/About">About</a>
             </Link>
             <Link to="/Login">
               {" "}
-              <a>Login</a>
+              <a href="/Login">Login</a>
             </Link>
             <Link to="/Signup">
               {" "}
@@ -34,7 +30,7 @@ export default function () {
             </Link>
             <Link to="/Contact">
               {" "}
-              <a>Contact</a>
+              <a href="/Contact">Contact</a>
             </Link>
           </div>
           <label for={Styles.check}>
@@ -57,22 +53,22 @@ export default function () {
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur.
             </p>
-            <a href="#" className={Styles.info_btn}>
+            <Link to="/"><a href="/" className={Styles.info_btn}>
               More info
-            </a>
+            </a></Link>
           </div>
         </div>
 
         <div className={Styles.media_icons}>
-          <a href="#">
+          <i className={Styles.icons}>
             <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#">
+          </i>
+          <i className={Styles.icons}>
             <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#">
+          </i>
+          <i className={Styles.icons}>
             <i class="fab fa-instagram"></i>
-          </a>
+          </i>
         </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {} from "react";
 import Styles from "./Card.module.css";
 import { Link } from "react-router-dom";
 export default function Card(props) {

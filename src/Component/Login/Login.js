@@ -1,20 +1,14 @@
 import React, { useState } from "react";
 import Styles from "./Login.module.css";
 import TextBox from "../../UI/TextBox/TextBox";
-import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
+
 import { NavLink } from "react-router-dom";
 
 export default function Login() {
   const [e, setEmail] = useState(null); // for email validata or not check
   const [p, setPhone] = useState(null); // for number validate or not check
 
-  const useStyles = makeStyles((theme) => ({
-    form: {
-      width: "100%", // Fix IE 11 issue.
-      marginTop: theme.spacing(3)
-    }
-  }));
+  
 
   var check = () => {
     var email = document.getElementById("email").value;
@@ -43,7 +37,6 @@ export default function Login() {
       setPhone("Invaild Phone No.");
     }
   };
-  const classes = useStyles();
 
   return (
     <div className="container-fluid">

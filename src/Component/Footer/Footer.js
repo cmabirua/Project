@@ -7,13 +7,6 @@ export default function Footer(){
         <div className={Styles.footer_content}>
             <h3>Seema and Team</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo iste corrupti doloribus odio sed!</p>
-            <ul className={Styles.socials}>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-            </ul>
         </div>
         <div className={Styles.footer_bottom}>
             <p>Copyright &copy;2021 Seema and Team designed by <span>Seema</span></p>
