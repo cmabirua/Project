@@ -6,10 +6,10 @@ export default function Footer(){
         <footer>
         <div className={Styles.footer_content}>
             <h3>Seema and Team</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo iste corrupti doloribus odio sed!</p>
+            <p>A Small team aim to introduce the coding to the student and help them to achieve success in their life. </p>
         </div>
         <div className={Styles.footer_bottom}>
-            <p>Copyright &copy;2021 Seema and Team designed by <span>Seema</span></p>
+            <p>Copyright &copy;2021 Seema and Team designed by <span>Team</span></p>
         </div>
     </footer>
         </div>
