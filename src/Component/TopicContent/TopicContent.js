@@ -1,4 +1,7 @@
 import React, { useState } from "react"
+import Footer from "../Footer/Footer";
+import Card from "./Card/Card";
+import Styles from "./TopicContent.module.css"
 // import Styles from "./TopicContent.module.css"
 export default function TopicContent(props){
     // console.log(props.match.params.id); //Give Topic Name
@@ -2835,11 +2838,32 @@ export default function TopicContent(props){
     }
     console.log(data);
     return(
-        <div>
-            {/* <h1>{props.match.params.id}</h1> */}
+        <>
+        <div className="container">
+        <div className="row">
+
+            <div className={`col-lg-12`}>
+            <div className={'row'}>
+
+                <div className={`col-lg-8 col-sm-12 ${Styles.topic}`}>
+                    {arr[idx]}
+                </div>
+                <div className={`col-lg-4 col-sm-12 ${Styles.data}`}>
+                        Total Qns. {data==null?0:data.length}
+                        
+
+                </div>
+            </div>
+            </div>
             {data==null?"":data.map((d)=>(
-                <p>{d.Problem}</p>
+                <Card
+                    name = {d.Problem}
+                    link = {d.URL}
+                />
             ))}
         </div>
+        </div>
+        <Footer></Footer>
+        </>
     )
 }

@@ -1,0 +1,21 @@
+.topic{
+    width: 100%;
+    float: left;
+    font-size: 36px;
+    color: black;
+    background: #F2F2F2;
+    border-radius: 5px;
+    align-items: center;
+    margin-top: 30px;
+}
+.data{
+    margin-top: 30px;
+    font-size: 36px;
+    float: right;
+}
+@media only screen and (max-width: 500px) {
+    .topic{
+        width: 95%;
+        margin-left: 12px;
+    }
+}
