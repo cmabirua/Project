@@ -12,7 +12,7 @@ export default function Topic() {
     "Graph",
     "Searching",
     "Sorting",
-    "Hashing",
+    "DP",
     "BST",
     "Matrix",
     "Heap"
