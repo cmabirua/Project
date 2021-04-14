@@ -3,10 +3,10 @@ import Footer from "../Footer/Footer";
 import MainContent from "../MainContent/MainContent";
 import MidContent from "../MidContent/MidContent";
 import Topic from "../Topic/Topic";
-export default function Main() {
+export default function Main(props) {
   return (
     <>
-      <MainContent></MainContent>
+      <MainContent data={props}></MainContent>
       <Topic></Topic>
      
     <hr style={{backgroundColor:"#73def9" }}/>

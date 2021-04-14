@@ -10,7 +10,7 @@ export default function Card(props) {
         <div className={`${Styles.wave} ${Styles.three}`}></div>
         <div className={Styles.title}>
           <Link
-            to={"/" + props.Topic}
+            to={"/topic/" + props.Topic}
             style={{ color: "white", textDecoration: "none" }}
           >
             {props.Topic}

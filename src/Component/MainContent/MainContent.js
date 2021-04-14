@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Styles from "./MainContent.module.css";
-export default function () {
+export default function (props) {
   return (
     <div>
       <section>
@@ -20,18 +20,16 @@ export default function () {
               {" "}
               <a href="/About">About</a>
             </Link>
-            <Link to="/Login">
-              {" "}
-              <a href="/Login">Login</a>
-            </Link>
-            <Link to="/Signup">
-              {" "}
-              <a href="/Signup">SignUp</a>
-            </Link>
+            
+            
             <Link to="/Contact">
               {" "}
               <a href="/Contact">Contact</a>
             </Link>
+            <Link to={props.data.check.state.name==null?"/Login":"/"}>
+              {" "}
+              <a href={props.data.check.state.name==null?"/Login":"/"}>{props.data.check.state.name==null?"Login":props.data.check.state.name}</a>
+              </Link>
           </div>
           <label for={Styles.check}>
             <i class={`fas fa-bars ${Styles.menu_btn}`}></i>

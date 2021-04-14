@@ -4,7 +4,7 @@ import Card from "./Card/Card";
 import Styles from "./TopicContent.module.css"
 // import Styles from "./TopicContent.module.css"
 export default function TopicContent(props){
-    // console.log(props.match.params.id); //Give Topic Name
+    console.log(props.match.params.id); //Give Topic Name
     var x = props.match.params.id
     let arr = [
     "Array",

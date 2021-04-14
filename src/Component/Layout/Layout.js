@@ -48,7 +48,7 @@ export default function Layout() {
             )}
           ></Route>
           <Route
-            path="/:id"
+            path="/topic/:id"
             component={
               TopicContent
               
