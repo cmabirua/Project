@@ -3,7 +3,7 @@ import Styles from "./Card.module.css";
 import { Link } from "react-router-dom";
 export default function Card(props) {
   return (
-    <div className={`col-lg-3 col-md-4 ${Styles.content}`}>
+    <div>
       <div className={`${Styles.card}`}>
         <div className={`${Styles.wave} ${Styles.one}`}></div>
         <div className={`${Styles.wave} ${Styles.two}`}></div>

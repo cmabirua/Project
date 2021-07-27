@@ -1,4 +1,5 @@
 import React from "react";
+import Company from "../Company/Company";
 import Footer from "../Footer/Footer";
 import MainContent from "../MainContent/MainContent";
 import MidContent from "../MidContent/MidContent";
@@ -8,7 +9,7 @@ export default function Main(props) {
     <>
       <MainContent data={props}></MainContent>
       <Topic></Topic>
-     
+      <Company></Company>
     <hr style={{backgroundColor:"#73def9" }}/>
       <MidContent></MidContent>
       {/* <hr style={{backgroundColor:"#73def9" }}/> */}

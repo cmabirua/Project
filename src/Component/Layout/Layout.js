@@ -7,7 +7,8 @@ import Topic from "../Topic/Topic";
 import TopicContent from "../TopicContent/TopicContent";
 import {Subscribe} from "unstated";
 import Data from "../../Container/Data";
-
+import CTopic from "../Company/Topic/Topic"
+import Complier from "../Complier/Complier";
 export default function Layout() {
   return (
     <BrowserRouter>
@@ -48,12 +49,20 @@ export default function Layout() {
             )}
           ></Route>
           <Route
+            path="/company/:id"
+            component={
+              CTopic
+              
+           }
+          ></Route>
+          <Route
             path="/topic/:id"
             component={
               TopicContent
               
            }
           ></Route>
+          <Route path = "/complier"><Complier></Complier> </Route>
 
       {/* <Route path="/login" exact component={Login}></Route>
       <Route path="/signup" exact component={SignUp}></Route>
