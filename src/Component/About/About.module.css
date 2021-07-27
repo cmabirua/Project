@@ -9,7 +9,7 @@ body{
     height: 100vh;
     padding: 20px;
 }
-img{
+.details img{
 	width: 50%;
     height: 50%;
     border-radius: 50%;

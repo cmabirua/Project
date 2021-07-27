@@ -125,15 +125,20 @@ function Complier(props) {
       input: input,
     };
     console.log(formData);
-    await axios.post("http://localhost:5002/codex", formData).then((res) => {
-      console.log(res.data);
-      if (res.data) {
-        console.log(res.data.output);
-        setOutput(res.data.output);
-        setRun(false);
-      }
-      // var output = document.getElementById("output");
-    });
+    await axios
+      .post(
+        "https://us-central1-codex-57871.cloudfunctions.net/api/codex",
+        formData
+      )
+      .then((res) => {
+        console.log(res.data);
+        if (res.data) {
+          console.log(res.data.output);
+          setOutput(res.data.output);
+          setRun(false);
+        }
+        // var output = document.getElementById("output");
+      });
   };
   const handleInput = (e) => {
     setInput(e.target.value);
