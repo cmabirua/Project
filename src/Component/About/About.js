@@ -38,7 +38,7 @@ function About() {
           <img src="https://media-exp1.licdn.com/dms/image/C5603AQE4qxrNQDpVFg/profile-displayphoto-shrink_200_200/0/1593547717594?e=1632960000&v=beta&t=1egYAosGR4zqK8feNmfYbsTvf_CUr18KlLEJ_Hdrx90" />
 
           <br></br>
-          <h1>Seema Horo</h1>
+          <h1>Seema HORO</h1>
           <h3>Computer Science and Engineering</h3>
           {/* <h5>Co-Founder</h5> */}
         </div>
