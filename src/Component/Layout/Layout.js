@@ -9,27 +9,24 @@ import {Subscribe} from "unstated";
 import Data from "../../Container/Data";
 import CTopic from "../Company/Topic/Topic"
 import Complier from "../Complier/Complier";
+import About from "../About/About";
 export default function Layout() {
   return (
     <BrowserRouter>
       {/* <Route path="/topic/:id" exact component={TopicContent} />  */}
       <Route
-            path="/login"
-            exact
-            component={() => (
-              <Subscribe to={[Data]}>
-                {(data) => <Login check={data} />}
-              </Subscribe>
-            )}
-          ></Route>
+        path="/login"
+        exact
+        component={() => (
+          <Subscribe to={[Data]}>{(data) => <Login check={data} />}</Subscribe>
+        )}
+      ></Route>
       <Route
-            path="/signup"
-            component={() => (
-              <Subscribe to={[Data]}>
-                {(data) => <SignUp check={data} />}
-              </Subscribe>
-            )}
-          ></Route>
+        path="/signup"
+        component={() => (
+          <Subscribe to={[Data]}>{(data) => <SignUp check={data} />}</Subscribe>
+        )}
+      ></Route>
       {/* <Route
             path="/Topic"
 
@@ -39,30 +36,20 @@ export default function Layout() {
               </Subscribe>
             )}
           ></Route> */}
-          <Route
-            path="/"
-            exact
-            component={() => (
-              <Subscribe to={[Data]}>
-                {(data) => <Main check={data} />}
-              </Subscribe>
-            )}
-          ></Route>
-          <Route
-            path="/company/:id"
-            component={
-              CTopic
-              
-           }
-          ></Route>
-          <Route
-            path="/topic/:id"
-            component={
-              TopicContent
-              
-           }
-          ></Route>
-          <Route path = "/complier"><Complier></Complier> </Route>
+      <Route
+        path="/"
+        exact
+        component={() => (
+          <Subscribe to={[Data]}>{(data) => <Main check={data} />}</Subscribe>
+        )}
+      ></Route>
+      <Route path="/company/:id" component={CTopic}></Route>
+      <Route path="/solve/:id" component={Complier}></Route>
+      <Route path="/topic/:id" component={TopicContent}></Route>
+      <Route path="/about" component={About}></Route>
+      {/* <Route path="/complier">
+        <Complier></Complier>{" "}
+      </Route> */}
 
       {/* <Route path="/login" exact component={Login}></Route>
       <Route path="/signup" exact component={SignUp}></Route>

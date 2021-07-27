@@ -1,5 +1,1095 @@
-import React from "react"
+import React from "react";
 
-export default function Question(){
-    
+export default function Question(idx) {
+  let ques = [
+    [
+      {
+        Topic: "Array",
+        Problem: "Minimum no. of Jumps to reach end of an array",
+        Done: false,
+        URL: "5",
+      },
+      {
+        Topic: "Array",
+        Problem: 'Find the "Kth" max and min element of an array ',
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/kth-smallest-element/0",
+      },
+      {
+        Topic: "Array",
+        Problem:
+          "Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s/0",
+      },
+      {
+        Topic: "Array",
+        Problem: "Move all the negative elements to one side of the array ",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/move-negative-numbers-beginning-positive-end-constant-extra-space/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem:
+          "Write a Program to reverse the Linked List. (Both Iterative and recursive)",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/reverse-a-linked-list/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Reverse a Linked List in group of Given Size. [Very Imp]",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/reverse-a-linked-list-in-groups-of-given-size/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Write a program to Detect loop in a linked list.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/detect-loop-in-linked-list/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Write a program to Delete loop in a linked list.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/remove-loop-in-linked-list/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Find the starting point of the loop. ",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: " Implement Stack from Scratch",
+        Done: false,
+        URL: "https://www.tutorialspoint.com/javaexamples/data_stack.htm",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: " Implement Queue from Scratch",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/queue-set-1introduction-and-array-implementation/",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Implement 2 stack in an array",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/implement-two-stacks-in-an-array/1",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "find the middle element of a stack",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/design-a-stack-with-find-middle-operation/",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: 'Implement "N" stacks in an Array',
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/efficiently-implement-k-stacks-single-array/",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Boundary traversal of a Binary tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem:
+          "Construct Binary Tree from String with Bracket Representation",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/construct-binary-tree-string-bracket-representation/",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Convert Binary tree into Doubly Linked List",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/binary-tree-to-dll/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Convert Binary tree into Sum tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/transform-to-sum-tree/1",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Minimum Step by Knight",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/steps-by-knight/0",
+      },
+      {
+        Topic: "Graph",
+        Problem: "flood fill algo",
+        Done: false,
+        URL: "https://leetcode.com/problems/flood-fill/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Clone a graph",
+        Done: false,
+        URL: "https://leetcode.com/problems/clone-graph/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Making wired Connections",
+        Done: false,
+        URL: "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
+      },
+    ],
+    [
+      {
+        Topic: "Array",
+        Problem:
+          "Rearrange the array in alternating positive and negative items with O(1) extra space",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/rearrange-array-alternating-positive-negative-items-o1-extra-space/",
+      },
+      {
+        Topic: "Array",
+        Problem: "Find if there is any subarray with sum equal to 0",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/subarray-with-0-sum/0",
+      },
+      {
+        Topic: "Array",
+        Problem: "Find factorial of a large number",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/factorials-of-large-numbers/0",
+      },
+      {
+        Topic: "Array",
+        Problem: "find maximum product subarray ",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/maximum-product-subarray3604/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Deletion from a Circular Linked List.",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/deletion-circular-linked-list/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Reverse a Doubly Linked list.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/reverse-a-doubly-linked-list/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Find pairs with a given sum in a DLL.",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/find-pairs-given-sum-doubly-linked-list/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem:
+          "Count triplets in a sorted DLL whose sum is equal to given value “X”.",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/count-triplets-sorted-doubly-linked-list-whose-sum-equal-given-value-x/",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Sort a Stack using recursion",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/sort-a-stack/1",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Merge Overlapping Intervals",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/overlapping-intervals/0",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Largest rectangular Area in Histogram",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/maximum-rectangular-area-in-a-histogram/0",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Check if Binary tree is Sum tree or not",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/sum-tree/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Check if all leaf nodes are at same level or not",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/leaf-at-same-level/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem:
+          "Check if a Binary Tree contains duplicate subtrees of size 2 or more [ IMP ]",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/duplicate-subtree-in-binary-tree/1",
+      },
+      {
+        Topic: "Graph",
+        Problem: "flood fill algo",
+        Done: false,
+        URL: "https://leetcode.com/problems/flood-fill/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Clone a graph",
+        Done: false,
+        URL: "https://leetcode.com/problems/clone-graph/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Making wired Connections",
+        Done: false,
+        URL: "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
+      },
+    ],
+    [
+      {
+        Topic: "Array",
+        Problem:
+          "Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s/0",
+      },
+      {
+        Topic: "Array",
+        Problem: "Move all the negative elements to one side of the array ",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/move-negative-numbers-beginning-positive-end-constant-extra-space/",
+      },
+      {
+        Topic: "Array",
+        Problem: "Find the Union and Intersection of the two sorted arrays.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/union-of-two-arrays/0",
+      },
+      {
+        Topic: "Array",
+        Problem: "find duplicate in an array of N+1 Integers",
+        Done: false,
+        URL: "https://leetcode.com/problems/find-the-duplicate-number/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Find pairs with a given sum in a DLL.",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/find-pairs-given-sum-doubly-linked-list/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem:
+          "Count triplets in a sorted DLL whose sum is equal to given value “X”.",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/count-triplets-sorted-doubly-linked-list-whose-sum-equal-given-value-x/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Sort a “k”sorted Doubly Linked list.[Very IMP]",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/sort-k-sorted-doubly-linked-list/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Rotate DoublyLinked list by N nodes.",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/rotate-doubly-linked-list-n-nodes/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem:
+          "Rotate a Doubly Linked list in group of Given Size.[Very IMP]",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/reverse-doubly-linked-list-groups-given-size/",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Evaluation of Postfix expression",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/evaluation-of-postfix-expression/0",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem:
+          "Implement a method to insert an element at its bottom without using any other data structure.",
+        Done: false,
+        URL: "https://stackoverflow.com/questions/45130465/inserting-at-the-end-of-stack",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Reverse a stack using recursion",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/reverse-a-stack-using-recursion/",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Right View of Tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/right-view-of-binary-tree/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Top View of a tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Bottom View of a tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem:
+          "Construct Binary Tree from String with Bracket Representation",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/construct-binary-tree-string-bracket-representation/",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Convert Binary tree into Doubly Linked List",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/binary-tree-to-dll/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Convert Binary tree into Sum tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/transform-to-sum-tree/1",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Minimum Step by Knight",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/steps-by-knight/0",
+      },
+      {
+        Topic: "Graph",
+        Problem: "flood fill algo",
+        Done: false,
+        URL: "https://leetcode.com/problems/flood-fill/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Clone a graph",
+        Done: false,
+        URL: "https://leetcode.com/problems/clone-graph/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Making wired Connections",
+        Done: false,
+        URL: "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "word Ladder ",
+        Done: false,
+        URL: "https://leetcode.com/problems/word-ladder/",
+      },
+    ],
+    [
+      {
+        Topic: "Array",
+        Problem: 'Find the "Kth" max and min element of an array ',
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/kth-smallest-element/0",
+      },
+      {
+        Topic: "Array",
+        Problem:
+          "Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s/0",
+      },
+      {
+        Topic: "Array",
+        Problem: "Move all the negative elements to one side of the array ",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/move-negative-numbers-beginning-positive-end-constant-extra-space/",
+      },
+      {
+        Topic: "Array",
+        Problem: "Find the Union and Intersection of the two sorted arrays.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/union-of-two-arrays/0",
+      },
+      {
+        Topic: "Array",
+        Problem: "find duplicate in an array of N+1 Integers",
+        Done: false,
+        URL: "https://leetcode.com/problems/find-the-duplicate-number/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Add “1” to a number represented as a Linked List.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/add-1-to-a-number-represented-as-linked-list/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Add two numbers represented by linked lists.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Intersection of two Sorted Linked List.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/intersection-of-two-sorted-linked-lists/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Intersection Point of two Linked Lists.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Merge Sort For Linked lists.[Very Important]",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/sort-a-linked-list/1",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: 'Implement "n" queue in an array',
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/efficiently-implement-k-queues-single-array/",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Implement a Circular queue",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/circular-queue-set-1-introduction-array-implementation/",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "LRU Cache Implementationa",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/lru-cache/1",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Reverse a Queue using recursion",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/queue-reversal/1",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Reverse the first “K” elements of a queue",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/reverse-first-k-elements-of-queue/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem:
+          "Preorder Traversal of a tree both using recursion and Iteration",
+        Done: false,
+        URL: "https://www.techiedelight.com/preorder-tree-traversal-iterative-recursive/",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem:
+          "Postorder Traversal of a tree both using recursion and Iteration",
+        Done: false,
+        URL: "https://www.techiedelight.com/postorder-tree-traversal-iterative-recursive/",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Left View of a tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Right View of Tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/right-view-of-binary-tree/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Top View of a tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Clone a graph",
+        Done: false,
+        URL: "https://leetcode.com/problems/clone-graph/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Making wired Connections",
+        Done: false,
+        URL: "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "word Ladder ",
+        Done: false,
+        URL: "https://leetcode.com/problems/word-ladder/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Dijkstra algo",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Implement Topological Sort ",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/topological-sort/1",
+      },
+    ],
+    [
+      {
+        Topic: "Array",
+        Problem: 'Find the "Kth" max and min element of an array ',
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/kth-smallest-element/0",
+      },
+      {
+        Topic: "Array",
+        Problem:
+          "Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s/0",
+      },
+      {
+        Topic: "Array",
+        Problem: "Move all the negative elements to one side of the array ",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/move-negative-numbers-beginning-positive-end-constant-extra-space/",
+      },
+      {
+        Topic: "Array",
+        Problem: "Find the Union and Intersection of the two sorted arrays.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/union-of-two-arrays/0",
+      },
+      {
+        Topic: "Array",
+        Problem: "find duplicate in an array of N+1 Integers",
+        Done: false,
+        URL: "https://leetcode.com/problems/find-the-duplicate-number/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Add “1” to a number represented as a Linked List.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/add-1-to-a-number-represented-as-linked-list/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Add two numbers represented by linked lists.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Intersection of two Sorted Linked List.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/intersection-of-two-sorted-linked-lists/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Intersection Point of two Linked Lists.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Merge Sort For Linked lists.[Very Important]",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/sort-a-linked-list/1",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: 'Implement "n" queue in an array',
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/efficiently-implement-k-queues-single-array/",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Implement a Circular queue",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/circular-queue-set-1-introduction-array-implementation/",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "LRU Cache Implementationa",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/lru-cache/1",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Reverse a Queue using recursion",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/queue-reversal/1",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Reverse the first “K” elements of a queue",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/reverse-first-k-elements-of-queue/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem:
+          "Preorder Traversal of a tree both using recursion and Iteration",
+        Done: false,
+        URL: "https://www.techiedelight.com/preorder-tree-traversal-iterative-recursive/",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem:
+          "Postorder Traversal of a tree both using recursion and Iteration",
+        Done: false,
+        URL: "https://www.techiedelight.com/postorder-tree-traversal-iterative-recursive/",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Left View of a tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Right View of Tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/right-view-of-binary-tree/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Top View of a tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Clone a graph",
+        Done: false,
+        URL: "https://leetcode.com/problems/clone-graph/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Making wired Connections",
+        Done: false,
+        URL: "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "word Ladder ",
+        Done: false,
+        URL: "https://leetcode.com/problems/word-ladder/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Dijkstra algo",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Implement Topological Sort ",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/topological-sort/1",
+      },
+    ],
+    [
+      {
+        Topic: "Array",
+        Problem:
+          "Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s/0",
+      },
+      {
+        Topic: "Array",
+        Problem: "Move all the negative elements to one side of the array ",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/move-negative-numbers-beginning-positive-end-constant-extra-space/",
+      },
+      {
+        Topic: "Array",
+        Problem: "Find the Union and Intersection of the two sorted arrays.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/union-of-two-arrays/0",
+      },
+      {
+        Topic: "Array",
+        Problem: "find duplicate in an array of N+1 Integers",
+        Done: false,
+        URL: "https://leetcode.com/problems/find-the-duplicate-number/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Find pairs with a given sum in a DLL.",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/find-pairs-given-sum-doubly-linked-list/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem:
+          "Count triplets in a sorted DLL whose sum is equal to given value “X”.",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/count-triplets-sorted-doubly-linked-list-whose-sum-equal-given-value-x/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Sort a “k”sorted Doubly Linked list.[Very IMP]",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/sort-k-sorted-doubly-linked-list/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Rotate DoublyLinked list by N nodes.",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/rotate-doubly-linked-list-n-nodes/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem:
+          "Rotate a Doubly Linked list in group of Given Size.[Very IMP]",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/reverse-doubly-linked-list-groups-given-size/",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Evaluation of Postfix expression",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/evaluation-of-postfix-expression/0",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem:
+          "Implement a method to insert an element at its bottom without using any other data structure.",
+        Done: false,
+        URL: "https://stackoverflow.com/questions/45130465/inserting-at-the-end-of-stack",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Reverse a stack using recursion",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/reverse-a-stack-using-recursion/",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Right View of Tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/right-view-of-binary-tree/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Top View of a tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Bottom View of a tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem:
+          "Construct Binary Tree from String with Bracket Representation",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/construct-binary-tree-string-bracket-representation/",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Convert Binary tree into Doubly Linked List",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/binary-tree-to-dll/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Convert Binary tree into Sum tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/transform-to-sum-tree/1",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Minimum Step by Knight",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/steps-by-knight/0",
+      },
+      {
+        Topic: "Graph",
+        Problem: "flood fill algo",
+        Done: false,
+        URL: "https://leetcode.com/problems/flood-fill/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Clone a graph",
+        Done: false,
+        URL: "https://leetcode.com/problems/clone-graph/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Making wired Connections",
+        Done: false,
+        URL: "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "word Ladder ",
+        Done: false,
+        URL: "https://leetcode.com/problems/word-ladder/",
+      },
+    ],
+    [
+      {
+        Topic: "Array",
+        Problem:
+          "Rearrange the array in alternating positive and negative items with O(1) extra space",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/rearrange-array-alternating-positive-negative-items-o1-extra-space/",
+      },
+      {
+        Topic: "Array",
+        Problem: "Find if there is any subarray with sum equal to 0",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/subarray-with-0-sum/0",
+      },
+      {
+        Topic: "Array",
+        Problem: "Find factorial of a large number",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/factorials-of-large-numbers/0",
+      },
+      {
+        Topic: "Array",
+        Problem: "find maximum product subarray ",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/maximum-product-subarray3604/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Deletion from a Circular Linked List.",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/deletion-circular-linked-list/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Reverse a Doubly Linked list.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/reverse-a-doubly-linked-list/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Find pairs with a given sum in a DLL.",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/find-pairs-given-sum-doubly-linked-list/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem:
+          "Count triplets in a sorted DLL whose sum is equal to given value “X”.",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/count-triplets-sorted-doubly-linked-list-whose-sum-equal-given-value-x/",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Sort a Stack using recursion",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/sort-a-stack/1",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Merge Overlapping Intervals",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/overlapping-intervals/0",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Largest rectangular Area in Histogram",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/maximum-rectangular-area-in-a-histogram/0",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Check if Binary tree is Sum tree or not",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/sum-tree/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Check if all leaf nodes are at same level or not",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/leaf-at-same-level/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem:
+          "Check if a Binary Tree contains duplicate subtrees of size 2 or more [ IMP ]",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/duplicate-subtree-in-binary-tree/1",
+      },
+      {
+        Topic: "Graph",
+        Problem: "flood fill algo",
+        Done: false,
+        URL: "https://leetcode.com/problems/flood-fill/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Clone a graph",
+        Done: false,
+        URL: "https://leetcode.com/problems/clone-graph/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Making wired Connections",
+        Done: false,
+        URL: "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
+      },
+    ],
+    [
+      {
+        Topic: "Array",
+        Problem: "Minimum no. of Jumps to reach end of an array",
+        Done: false,
+        URL: "5",
+      },
+      {
+        Topic: "Array",
+        Problem: 'Find the "Kth" max and min element of an array ',
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/kth-smallest-element/0",
+      },
+      {
+        Topic: "Array",
+        Problem:
+          "Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s/0",
+      },
+      {
+        Topic: "Array",
+        Problem: "Move all the negative elements to one side of the array ",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/move-negative-numbers-beginning-positive-end-constant-extra-space/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem:
+          "Write a Program to reverse the Linked List. (Both Iterative and recursive)",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/reverse-a-linked-list/",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Reverse a Linked List in group of Given Size. [Very Imp]",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/reverse-a-linked-list-in-groups-of-given-size/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Write a program to Detect loop in a linked list.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/detect-loop-in-linked-list/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Write a program to Delete loop in a linked list.",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/remove-loop-in-linked-list/1",
+      },
+      {
+        Topic: "LinkedList",
+        Problem: "Find the starting point of the loop. ",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: " Implement Stack from Scratch",
+        Done: false,
+        URL: "https://www.tutorialspoint.com/javaexamples/data_stack.htm",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: " Implement Queue from Scratch",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/queue-set-1introduction-and-array-implementation/",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "Implement 2 stack in an array",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/implement-two-stacks-in-an-array/1",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: "find the middle element of a stack",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/design-a-stack-with-find-middle-operation/",
+      },
+      {
+        Topic: "Stacks & Queues",
+        Problem: 'Implement "N" stacks in an Array',
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/efficiently-implement-k-stacks-single-array/",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Boundary traversal of a Binary tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem:
+          "Construct Binary Tree from String with Bracket Representation",
+        Done: false,
+        URL: "https://www.geeksforgeeks.org/construct-binary-tree-string-bracket-representation/",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Convert Binary tree into Doubly Linked List",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/binary-tree-to-dll/1",
+      },
+      {
+        Topic: "Binary Trees",
+        Problem: "Convert Binary tree into Sum tree",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/transform-to-sum-tree/1",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Minimum Step by Knight",
+        Done: false,
+        URL: "https://practice.geeksforgeeks.org/problems/steps-by-knight/0",
+      },
+      {
+        Topic: "Graph",
+        Problem: "flood fill algo",
+        Done: false,
+        URL: "https://leetcode.com/problems/flood-fill/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Clone a graph",
+        Done: false,
+        URL: "https://leetcode.com/problems/clone-graph/",
+      },
+      {
+        Topic: "Graph",
+        Problem: "Making wired Connections",
+        Done: false,
+        URL: "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
+      },
+    ],
+  ];
+  return ques[idx];
 }

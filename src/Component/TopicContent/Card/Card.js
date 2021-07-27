@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom";
 import Styles from "./Card.module.css";
 export default function Card(props){
     return(
@@ -12,7 +13,7 @@ export default function Card(props){
                 </p>
             </div>
             <div className={`col-lg-4 ${Styles.btn}`}>
-                <a href={props.link} >Solve</a>
+                <Link to={"/solve/"+props.link} >Solve</Link>
             </div>
         </div>
         </div>

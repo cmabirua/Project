@@ -22,9 +22,9 @@ export default function (props) {
             </Link>
             
             
-            <Link to="/Contact">
+            <Link to="/Complier">
               {" "}
-              <a href="/Contact">Contact</a>
+              <a href="/Complier">Code Editor</a>
             </Link>
             <Link to={props.data.check.state.name==null?"/Login":"/"}>
               {" "}

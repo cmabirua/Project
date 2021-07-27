@@ -23,24 +23,45 @@ export default function TopicContent(props){
   var idx = 0
   for(var i = 0;i<arr.length;i++){
       if(arr[i]==x){
-          idx = i;
-          break;
+        idx = i;
+        break;
       }
-  }
-  
+    }
+    
     let question = [[
       {
         Topic: "Array",
         Problem: "Reverse the array",
         Done: false,
         URL:
-          "https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/",
+        "1",
       },
       {
         Topic: "Array",
-        Problem: "Find the maximum and minimum element in an array",
+        Problem: "Write a program to cyclically rotate an array by one.",
         Done: false,
-        URL: "https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/",
+        URL:
+          "2",
+      },
+      {
+        Topic: "Array",
+        Problem: "find Largest sum contiguous Subarray [V. IMP]",
+        Done: false,
+        URL: "3",
+      },
+      {
+        Topic: "Array",
+        Problem: "Minimise the maximum difference between heights ",
+        Done: false,
+        URL:
+          "4",
+      },
+      {
+        Topic: "Array",
+        Problem: "Minimum no. of Jumps to reach end of an array",
+        Done: false,
+        URL:
+          "5",
       },
       {
         Topic: "Array",
@@ -73,33 +94,6 @@ export default function TopicContent(props){
       },
       {
         Topic: "Array",
-        Problem: "Write a program to cyclically rotate an array by one.",
-        Done: false,
-        URL:
-          "https://practice.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one/0",
-      },
-      {
-        Topic: "Array",
-        Problem: "find Largest sum contiguous Subarray [V. IMP]",
-        Done: false,
-        URL: "https://practice.geeksforgeeks.org/problems/kadanes-algorithm/0",
-      },
-      {
-        Topic: "Array",
-        Problem: "Minimise the maximum difference between heights [V.IMP]",
-        Done: false,
-        URL:
-          "https://practice.geeksforgeeks.org/problems/minimize-the-heights3351/1",
-      },
-      {
-        Topic: "Array",
-        Problem: "Minimum no. of Jumps to reach end of an array",
-        Done: false,
-        URL:
-          "https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps/0",
-      },
-      {
-        Topic: "Array",
         Problem: "find duplicate in an array of N+1 Integers",
         Done: false,
         URL: "https://leetcode.com/problems/find-the-duplicate-number/",
@@ -113,9 +107,9 @@ export default function TopicContent(props){
       },
       {
         Topic: "Array",
-        Problem: "Kadane's Algo [V.V.V.V.V IMP]",
+        Problem: "Kadane's Algo",
         Done: false,
-        URL: "https://practice.geeksforgeeks.org/problems/kadanes-algorithm/0",
+        URL: "3",
       },
       {
         Topic: "Array",
