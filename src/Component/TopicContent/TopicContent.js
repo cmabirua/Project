@@ -33,31 +33,31 @@ export default function TopicContent(props) {
       {
         Topic: "Array",
         Problem: "Reverse the array",
-        Done: false,
+        Done: true,
         URL: "1",
       },
       {
         Topic: "Array",
         Problem: "Write a program to cyclically rotate an array by one.",
-        Done: false,
+        Done: true,
         URL: "2",
       },
       {
         Topic: "Array",
         Problem: "find Largest sum contiguous Subarray [V. IMP]",
-        Done: false,
+        Done: true,
         URL: "3",
       },
       {
         Topic: "Array",
         Problem: "Minimise the maximum difference between heights ",
-        Done: false,
+        Done: true,
         URL: "4",
       },
       {
         Topic: "Array",
         Problem: "Minimum no. of Jumps to reach end of an array",
-        Done: false,
+        Done: true,
         URL: "5",
       },
       {
@@ -2573,7 +2573,7 @@ export default function TopicContent(props) {
           </div>
           {data == null
             ? ""
-            : data.map((d) => <Card name={d.Problem} link={d.URL} />)}
+            : data.map((d) => <Card name={d.Problem} link={d.URL} done = {d.Done} />)}
         </div>
       </div>
       <Footer></Footer>
