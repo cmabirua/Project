@@ -22,12 +22,12 @@ const mongoose = require("mongoose");
 //   }
 // );
 
-// const { generateFile } = require("./generateFile");
+const { generateFile } = require("./generateFile");
 var axios = require("axios");
-// const { executeCpp } = require("./executeCpp");
+const { executeCpp } = require("./executeCpp");
 
-// const { addJobToQueue } = require("./jobQueue");
-// const Job = require("./models/Job");
+const { addJobToQueue } = require("./jobQueue");
+const Job = require("./models/Job");
 
 const app = express();
 
@@ -35,26 +35,36 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// app.post("/run", async (req, res) => {
-//   const { language = "cpp", code, input } = req.body;
+app.post("/run", async (req, res) => {
+  const { language = "cpp", code, input } = req.body;
 
-//   console.log(language, "Length:", code.length, input);
+  console.log(language, "Length:", code.length, input);
 
-//   if (code === undefined) {
-//     return res.status(400).json({ success: false, error: "Empty code body!" });
-//   }
-//   // // need to generate a c++ file with content from the request
-//   const filepath = await generateFile(language, code);
-//   console.log(filepath);
-//   const data = await executeCpp(filepath, input);
-//   console.log(data);
+  if (code === undefined) {
+    return res.status(400).json({ success: false, error: "Empty code body!" });
+  }
+  // // need to generate a c++ file with content from the request
+  const filepath = await generateFile(language, code);
+  console.log(filepath);
+  const data;
+  if(language=="cpp"){
+    data = await executeCpp(filepath, input);
+  }
+  if(language=="java"){
+    data = await executeJava(filepath, input);
+  }
+  if(language=="py"){
+    data = await executePy(filepath, input);
+  }
 
-//   // // write into DB
-//   // const job = await new Job({ language, filepath }).save();
-//   // const jobId = job["_id"];
-//   // addJobToQueue(jobId);
-//   res.status(201).json({ data });
-// });
+  console.log(data);
+
+  // // write into DB
+  // const job = await new Job({ language, filepath }).save();
+  // const jobId = job["_id"];
+  // addJobToQueue(jobId);
+  res.status(201).json({ data });
+});
 app.post("/codex", async (req, res) => {
   const { language = "cpp", code, input } = req.body;
   console.log(language, "Length:", code.length, input);
