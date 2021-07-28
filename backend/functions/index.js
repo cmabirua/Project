@@ -77,7 +77,7 @@ app.post("/codex", async (req, res) => {
   await axios(config)
     .then(function (response) {
       ress = response.data;
-      // console.log(response.data);
+      console.log(response);
     })
     .catch(function (error) {
       console.log(error);

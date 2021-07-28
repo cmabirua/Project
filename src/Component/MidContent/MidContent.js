@@ -6,13 +6,13 @@ export default function MidContent() {
     <>
     <div className={`row ${Styles.count}`}>
       <div className="col-lg-4">
-        <h1 className={Styles.num}>1</h1>
+        <h1 className={Styles.num}></h1>
       </div>
       <div className="col-lg-4">
-        <h1 className={Styles.num}>2</h1>
+        <h1 className={Styles.num}></h1>
       </div>
       <div className="col-lg-4">
-        <h1 className={Styles.num}>3</h1>
+        <h1 className={Styles.num}></h1>
       </div>
     </div>
     <div className={`row ${Styles.middle}`}>
