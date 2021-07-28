@@ -10,7 +10,7 @@ export default function (props) {
           <header>
             <h2>
               <p href="" className={Styles.logo}>
-                Logo
+                Codex
               </p>
             </h2>
             <div className={Styles.navigation}>
