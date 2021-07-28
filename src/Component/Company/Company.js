@@ -4,7 +4,7 @@ import Styles from "./Company.module.css"
 
 
 export default function Company(){
-    var arr = ["Amazon","MicroSoft","Google","FacaBook","Directi","Goldman Sachs","Netflix","Uber"];
+    var arr = ["Amazon","MicroSoft","Google","FacaBook","Directi","GoldmanSachs","Netflix","Uber"];
     var img = [
       "https://i.pinimg.com/originals/08/5f/d8/085fd8f7819dee3b716da73d3b2de61c.jpg",
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEXz8/PzUyWBvAYFpvD/ugjz9fb19Pbz+fr49fv79vPy9fsAofD/tgDz29Xh6tLzRAB5uADzTRjzlH2u0XBwxPH70HHS5vP16tLz4+Dn7d3zPQCpz2bd6/NmwfH7zmf07d3zjnTzuKrI3qGh1fL43aIAnPDEciU8AAABeUlEQVR4nO3cSW7CUBBFURLiD4GYvjVtGva/xUxixxJfyqhMBudu4Omo5tXrSZKkVkV4zVQKLysso9vVxLSfRJe7YFlNY6uug5+t4WEW3eT+ikU5fYptvmiEy+fgCAkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCbsVVvPYpi3h7BHC3XUR3HstTB/L4A77zJ/dYhBes5WG0eUfCUuS9Gev4TVTaRRdkQEeT6vYTp81MX2tgztfMsTNrR/b+FQLR+u36LY54ThY2F+1hC+xERISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEnYrvI1ju/3+Lz0/5H9psYnu2ExdttHd+7qtCO/RQkmS/lffeJs9EU0/9ZkAAAAASUVORK5CYII=",
