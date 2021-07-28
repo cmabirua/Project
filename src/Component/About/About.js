@@ -19,7 +19,7 @@ function About() {
   return (
     <div>
       <div className={`${Styles.details}`}>
-        <div>
+        <div data-aos="fade-up">
           <img src="https://media-exp1.licdn.com/dms/image/C5103AQHc3IbVjCCVog/profile-displayphoto-shrink_800_800/0/1558431490248?e=1632960000&v=beta&t=oIpYtUFsHeXHYE7MASaPLTgJktmR5nP0BcGGqSvy-1I" />
           <br></br>
           <h1>Zeeshan Hashmi</h1>
@@ -31,35 +31,35 @@ function About() {
         </div>
       </div>
       <div className={`${Styles.details}`}>
-        <div>
+        <div data-aos="fade-right">
           <Animation2 />
         </div>
-        <div>
+        <div data-aos="fade-left">
           <img src="https://media-exp1.licdn.com/dms/image/C5603AQE4qxrNQDpVFg/profile-displayphoto-shrink_200_200/0/1593547717594?e=1632960000&v=beta&t=1egYAosGR4zqK8feNmfYbsTvf_CUr18KlLEJ_Hdrx90" />
 
           <br></br>
-          <h1>Seema HORO</h1>
+          <h1>Seema Horo</h1>
           <h3>Computer Science and Engineering</h3>
           {/* <h5>Co-Founder</h5> */}
         </div>
       </div>
       <div className={`${Styles.details}`}>
-        <div>
+        <div data-aos="fade-up-right">
           <img src="https://media-exp1.licdn.com/dms/image/C5603AQElA4Z2CrOGGA/profile-displayphoto-shrink_200_200/0/1589261232369?e=1632960000&v=beta&t=2WKIpYCZNBRWczJGs3qHBg28WWWvAPzJgKXboXVm3Cc" />
           <br></br>
           <h1>Jasprit Kaur</h1>
           <h3>Computer Science and Engineering</h3>
           {/* <h5>Co-Founder</h5> */}
         </div>
-        <div>
+        <div data-aos="fade-up-left">
           <Animation3 />
         </div>
       </div>
       <div className={`${Styles.details}`}>
-        <div>
+        <div data-aos="zoom-in">
           <Animation4 />
         </div>
-        <div>
+        <div data-aos="zoom-in-up">
           <img src="https://media-exp1.licdn.com/dms/image/C5103AQHc3IbVjCCVog/profile-displayphoto-shrink_800_800/0/1558431490248?e=1632960000&v=beta&t=oIpYtUFsHeXHYE7MASaPLTgJktmR5nP0BcGGqSvy-1I" />
           <br></br>
           <h1>Sahid Anasri</h1>
@@ -68,18 +68,19 @@ function About() {
         </div>
       </div>
       <div className={`${Styles.details}`}>
-        <div>
+        <div data-aos="zoom-out">
           <img src="https://media-exp1.licdn.com/dms/image/C5103AQHc3IbVjCCVog/profile-displayphoto-shrink_800_800/0/1558431490248?e=1632960000&v=beta&t=oIpYtUFsHeXHYE7MASaPLTgJktmR5nP0BcGGqSvy-1I" />
           <br></br>
           <h1>Adib Akhtar</h1>
           <h3>Computer Science and Engineering</h3>
           {/* <h5>Co-Founder</h5> */}
         </div>
-        <div>
+        <div data-aos="zoom-out-up">
           <Animation5 />
         </div>
       </div>
-      Made with ❤️ {" "} for Recians
+      An open source community helping the carrer growth by providing the dsalgo
+      in syllabus oriented manner<br></br> Made with ❤️ for Recians
     </div>
   );
 }

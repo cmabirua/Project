@@ -10,6 +10,7 @@ import Data from "../../Container/Data";
 import CTopic from "../Company/Topic/Topic"
 import Complier from "../Complier/Complier";
 import About from "../About/About";
+import Editor from "../Editor/Editor";
 export default function Layout() {
   return (
     <BrowserRouter>
@@ -47,9 +48,9 @@ export default function Layout() {
       <Route path="/solve/:id" component={Complier}></Route>
       <Route path="/topic/:id" component={TopicContent}></Route>
       <Route path="/about" component={About}></Route>
-      {/* <Route path="/complier">
-        <Complier></Complier>{" "}
-      </Route> */}
+      <Route path="/complier">
+        <Editor></Editor> {" "}
+      </Route>
 
       {/* <Route path="/login" exact component={Login}></Route>
       <Route path="/signup" exact component={SignUp}></Route>

@@ -77,7 +77,7 @@ app.post("/codex", async (req, res) => {
   await axios(config)
     .then(function (response) {
       ress = response.data;
-      console.log(response);
+      // console.log(response.data);
     })
     .catch(function (error) {
       console.log(error);
@@ -106,7 +106,7 @@ app.get("/",(req,res)=>{
 //   return res.status(200).json({ success: true, job });
 // });
 
-app.listen(5002, () => {
+app.listen(5003, () => {
   console.log(`Listening on port 5000!`);
 });
 exports.api = functions.https.onRequest(app);

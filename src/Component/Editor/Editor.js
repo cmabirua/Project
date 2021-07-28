@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Styles from "./Complier.module.css";
+import Styles from "./Editor.module.css";
 // import {ace} from "./js/lib/ace.js"
 
 // let editor;
@@ -20,9 +20,9 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import NativeSelect from "@material-ui/core/NativeSelect";
 import InputBase from "@material-ui/core/InputBase";
-import Question from "./Question/Question";
+// import Question from "./Question/Question";
 import TextField from "@material-ui/core/TextField";
-import Animation from "./Animation/Animation";
+// import Animation from "./Animation/Animation";
 
 const BootstrapInput = withStyles((theme) => ({
   root: {
@@ -81,8 +81,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-function Complier(props) {
-  
+function Editor(props) {
   const [code, setCode] = useState(null);
   const [mode, setMode] = useState("c_cpp");
   const [language, setlanguage] = useState("cpp");
@@ -106,10 +105,10 @@ function Complier(props) {
     Math.floor(Math.random() * 5) + "." + Math.floor(Math.random() * 10)
   );
   const [runns, setEunns] = useState(true);
-  
+
   // console.log(props.match.params.id);
   if (runns) {
-    setQues(Question(props.match.params.id));
+//     setQues(Question(props.match.params.id));
     setEunns(false);
   }
 
@@ -137,17 +136,21 @@ function Complier(props) {
         console.log(res.data);
         if (res.data) {
           console.log(res.data.output);
-          
-          if(language=="py"){
-            setTime(Math.floor(Math.random() * 50) + "." + Math.floor(Math.random() * 10));
 
-          }
-          else{
+          if (language == "py") {
             setTime(
-            Math.floor(Math.random() * 5) + "." + Math.floor(Math.random() * 10)
-          );
+              Math.floor(Math.random() * 50) +
+                "." +
+                Math.floor(Math.random() * 10)
+            );
+          } else {
+            setTime(
+              Math.floor(Math.random() * 5) +
+                "." +
+                Math.floor(Math.random() * 10)
+            );
           }
-          setOutput(res.data.output+"\n"+time+"ms");
+          setOutput(res.data.output + "\n" + time + "ms");
           setRun(false);
         }
       });
@@ -176,115 +179,6 @@ function Complier(props) {
         <>
           <div className="container-fluid">
             <div className="row">
-              <div className="col-lg-6">
-                <div className={Styles.question}>
-                  <div className={Styles.title}>
-                    <TextField
-                      // disabled
-                      id="outlined-read-only-textarea"
-                      label="Question"
-                      placeholder={""}
-                      multiline
-                      variant="outlined"
-                      value={ques ? ques[0].name : ""}
-                      InputProps={{
-                        readOnly: true,
-                      }}
-                    />
-                    <div>
-                      <Button color="secondary">Solution</Button>
-                    </div>
-                    {/* <h2>{ques[0].name}</h2> */}
-                  </div>
-                  <div className={`${Styles.statement} ${classes.question}`}>
-                    <TextField
-                      // disabled
-                      id="outlined-read-only-textarea"
-                      label="Statement"
-                      placeholder={""}
-                      multiline
-                      variant="outlined"
-                      value={ques ? ques[0].statement : ""}
-                      InputProps={{
-                        readOnly: true,
-                      }}
-                    />
-                    {/* <h5>{ques[0].statement}</h5> */}
-                  </div>
-                  <div className={`${Styles.exp1} ${classes.exp1}`}>
-                    <TextField
-                      // disabled
-                      id="outlined-read-only-textarea"
-                      label="Example1"
-                      placeholder={""}
-                      multiline
-                      variant="outlined"
-                      value={ques ? ques[0].exp1 : ""}
-                      InputProps={{
-                        readOnly: true,
-                      }}
-                    />
-                  </div>
-                  <div className={`${Styles.exp2} ${classes.exp1}`}>
-                    <TextField
-                      // disabled
-                      id="outlined-read-only-textarea"
-                      label="Example2"
-                      placeholder={""}
-                      multiline
-                      variant="outlined"
-                      value={ques ? ques[0].exp2 : ""}
-                      InputProps={{
-                        readOnly: true,
-                      }}
-                    />
-                  </div>
-
-                  <div className={`${Styles.task} ${classes.question}`}>
-                    <TextField
-                      // disabled
-                      id="outlined-read-only-textarea"
-                      label="Your Task"
-                      placeholder={""}
-                      multiline
-                      variant="outlined"
-                      value={ques ? ques[0].output : ""}
-                      InputProps={{
-                        readOnly: true,
-                      }}
-                    />
-                    {/* <h5>{ques[0].statement}</h5> */}
-                  </div>
-                  <div className={`${Styles.input} ${classes.ts}`}>
-                    <TextField
-                      // disabled
-                      id="outlined-read-only-textarea"
-                      label="Time and Space"
-                      placeholder={""}
-                      multiline
-                      variant="outlined"
-                      value={ques ? ques[0].tc + "\n" + ques[0].as : ""}
-                      InputProps={{
-                        readOnly: true,
-                      }}
-                    />
-                  </div>
-                  <div className={Styles.cons}>
-                    <TextField
-                      // disabled
-                      id="outlined-read-only-textarea"
-                      label="Constraints"
-                      placeholder={""}
-                      multiline
-                      variant="outlined"
-                      value={ques ? ques[0].con : ""}
-                      InputProps={{
-                        readOnly: true,
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
               <div className="col-lg-6">
                 <div>
                   <div className={Styles.top}>
@@ -315,21 +209,15 @@ function Complier(props) {
                   <div className={Styles.complier}>
                     <AceEditor
                       width="100%"
-                      height="69.8vh"
+                      height="80vh"
                       mode={mode}
                       theme="textmate"
                       onChange={handleCode}
                       name="UNIQUE_ID_OF_DIV"
                       editorProps={{ $blockScrolling: true }}
                     />
-                    {/* <DiffEditor
-                value={["Test code differences", "Test code difference"]}
-                height="1000px"
-                width="1000px"
-                mode="text"
-              /> */}
                   </div>
-                  <div className={Styles.text}>
+                  {/* <div className={Styles.text}>
                     <div>
                       <h6>Input</h6>
                       <textarea
@@ -351,6 +239,32 @@ function Complier(props) {
                         {output}
                       </p>
                     </div>
+                  </div> */}
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className = {Styles.text}>
+                  <div>
+                    <h3>Input</h3>
+                    <textarea
+                      cols="40"
+                      rows="10"
+                      id="input"
+                      onChange={handleInput}
+                    ></textarea>
+                  </div>
+                  <div>
+                    <h3>Output</h3>
+                    <p
+                      style={{
+                        width: "336px",
+                        height: "240px",
+                        border: "1px lightgrey solid",
+			marginLeft:"26%"
+                      }}
+                    >
+                      {output}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -362,4 +276,4 @@ function Complier(props) {
   );
 }
 
-export default Complier;
+export default Editor;
