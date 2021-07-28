@@ -60,7 +60,7 @@ function About() {
           <Animation4 />
         </div>
         <div data-aos="zoom-in-up">
-          <img src="https://media-exp1.licdn.com/dms/image/C5103AQHc3IbVjCCVog/profile-displayphoto-shrink_800_800/0/1558431490248?e=1632960000&v=beta&t=oIpYtUFsHeXHYE7MASaPLTgJktmR5nP0BcGGqSvy-1I" />
+          <img src="https://raw.githubusercontent.com/cmabirua/Project/master/src/Assets/0-02-03-c43ed41ac2c955889cc018654c0a03a10101b25ff6cb8ef5d0e94e11213db53e_1c6da3e8d9411a.jpg" />
           <br></br>
           <h1>Sahid Anasri</h1>
           <h3>Computer Science and Engineering</h3>
@@ -69,7 +69,7 @@ function About() {
       </div>
       <div className={`${Styles.details}`}>
         <div data-aos="zoom-out">
-          <img src="https://media-exp1.licdn.com/dms/image/C5103AQHc3IbVjCCVog/profile-displayphoto-shrink_800_800/0/1558431490248?e=1632960000&v=beta&t=oIpYtUFsHeXHYE7MASaPLTgJktmR5nP0BcGGqSvy-1I" />
+          <img src="https://raw.githubusercontent.com/cmabirua/Project/master/src/Assets/0-02-03-e27ca102197ddbfcd17b323fdf65d4f5cd6c2ae6089bfdcf1c38ee58b4483e8f_1c6da3e8d8d7b4.jpg" />
           <br></br>
           <h1>Adib Akhtar</h1>
           <h3>Computer Science and Engineering</h3>
