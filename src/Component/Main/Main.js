@@ -13,7 +13,7 @@ export default function Main(props) {
     <hr style={{backgroundColor:"#73def9" }}/>
       <MidContent></MidContent>
       {/* <hr style={{backgroundColor:"#73def9" }}/> */}
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </>
   );
 }

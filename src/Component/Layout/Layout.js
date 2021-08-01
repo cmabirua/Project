@@ -47,7 +47,7 @@ export default function Layout() {
       <Route path="/company/:id" component={CTopic}></Route>
       <Route path="/solve/:id" component={Complier}></Route>
       <Route path="/topic/:id" component={TopicContent}></Route>
-      <Route path="/about" component={About}></Route>
+      {/* <Route path="/about" component={About}></Route> */}
       <Route path="/complier">
         <Editor></Editor> {" "}
       </Route>

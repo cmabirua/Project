@@ -5,11 +5,9 @@ import { Provider } from "unstated";
 export default function App() {
   return (
     <Provider>
-
-    <div className="App">
-      
-      <Layout></Layout>
-    </div>
+      <div className="App">
+        <Layout></Layout>
+      </div>
     </Provider>
   );
 }
